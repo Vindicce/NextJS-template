@@ -1,0 +1,10 @@
+import { Wrapped } from '~/components';
+
+import { I{{ pascalCase name }}Layout } from '~/containers/{{ pascalCase name }}/data'
+import S from './styles';
+
+export const {{pascalCase name}} = ({ data }: I{{ pascalCase name }}Layout) => (
+  <Wrapped flex={1} testID={`{{pascalCase name}}`}>
+    <S.Text>{`{{pascalCase name}}`}</S.Text>
+  </Wrapped>
+)

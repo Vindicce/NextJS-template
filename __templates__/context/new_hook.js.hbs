@@ -1,0 +1,26 @@
+import { FC } from 'react'
+import { createContext, useContextSelector } from 'use-context-selector';
+import { I{{ pascalCase name }}Context } from '~/utils';
+
+export const {{ pascalCase name }}Context = createContext<I{{ pascalCase name }}Context >(
+  {} as I{{ pascalCase name }}Context 
+);
+
+export const {{ pascalCase name }}Provider: FC = ({ children }) => {
+  
+  const value = {
+    initial: "test"
+  }
+
+  return (
+    <{{ pascalCase name }}Context.Provider value={value}>
+      {children}
+    </{{ pascalCase name }}Context.Provider>
+  );
+};
+
+export function use{{ pascalCase name }}(): I{{ pascalCase name }}Context {
+  return {
+    initial: useContextSelector({{ pascalCase name }}Context, ({{ pascalCase name }}) => {{ pascalCase name }}.initial),
+  }
+}
