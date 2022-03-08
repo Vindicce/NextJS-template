@@ -1,1 +1,1 @@
-export { default } from '~/containers/Index';
+export { default } from "~/containers/Index";
